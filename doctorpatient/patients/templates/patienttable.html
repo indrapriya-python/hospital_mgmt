@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Patient Name</th>
+      <th>Age</th>
+      <th>Doctor</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for patient in user %}
+      <tr>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.doctor.name }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="3">No patients found.</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+
+
+
